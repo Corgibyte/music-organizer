@@ -6,7 +6,7 @@ namespace MusicOrganizer.Models
   {
 
     public string Name { get; set; }
-    public int Id() { get; }
+    public int Id { get; }
     private static List<Album> _instances = new List<Album>() { };
 
     public Album(string name)
@@ -28,7 +28,7 @@ namespace MusicOrganizer.Models
 
     public static Album Find(int searchId)
     {
-      return _instances(searchId - 1);
+      return _instances[searchId - 1];
     }
   }
 }
